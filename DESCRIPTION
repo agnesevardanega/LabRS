@@ -1,0 +1,19 @@
+Package: LabRS
+Type: Package
+Title: Laboratorio di ricerca sociale con R
+Version: 0.1.0
+Authors@R: person("Agnese", "Vardanega", email = "avardanega@unite.it",
+  role = c("aut", "cre"))
+Author: Agnese Vardanega [aut, cre]
+Mantainer: Agnese Vardanega <avardanega@unite.it>
+URL: http://www.agnesevardanega.eu/metref/
+Depends:
+Suggests: 
+    car,
+    e1071,
+    likert,
+    Rcmdr
+Description: Libreria per il "Laboratorio di ricerca sociale con R". Introduzione a R e Rcmdr per la ricerca sociale. Livello base.
+License: GPL (>= 2)
+Encoding: UTF-8
+RoxygenNote: 6.0.1
