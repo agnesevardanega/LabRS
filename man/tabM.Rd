@@ -5,7 +5,7 @@
 Tabella "M" (dati)
 }
 \description{
-Tabella di contingenza (tipo "matrice"), adattata da un esempio del pacchetto \link[stats]{stats}.
+Tabella di contingenza (tipo "matrice"), adattata da un esempio nel file \link[stats]{chisq.test}.
 }
 
 \usage{data("tabM")}
