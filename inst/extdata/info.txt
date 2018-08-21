@@ -1,0 +1,8 @@
+
+FILE EXCEL:
+===========
+MYSLID.xlsx dal dataset SLID del package car
+            ( http://cran.r-project.org/web/packages/car )
+
+
+
