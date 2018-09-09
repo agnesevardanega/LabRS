@@ -4,18 +4,24 @@
 # CAPITOLO 1
 
 
-
 # LA CONSOLE DI R ---------------------------------------------------------
 
 3 + 2
 
 # FUNZIONI DI AIUTO
-help(rm)
-?rm
+
+help(chisq.test)
+?chisq.test
 ??chisq
 
 # demo
 demo(lm.glm)
+
+
+# RCOMMANDER --------------------------------------------------------------
+
+install.packages("Rcmdr", dependencies = TRUE)
+library(Rcmdr)
 
 
 # WORKSPACE ---------------------------------------------------------------
@@ -39,12 +45,6 @@ save.image(file.choose())
 load(file.choose())
 
 
-# RCOMMANDER --------------------------------------------------------------
-
-install.packages("Rcmdr", dependencies = TRUE)
-library(Rcmdr)
-
-
 # DIRECTORY DI LAVORO -----------------------------------------------------
 
 # per sapere quale è:
@@ -55,7 +55,7 @@ getwd()
 setwd(choose.dir())
 
 
-# USARE GLI SCRIPTS DI LabRS -------------------------------------------------
+# USARE GLI SCRIPTS DI LabRS ----------------------------------------------
 
 # LabRS
 install.packages("devtools", dependencies = TRUE)
@@ -68,3 +68,10 @@ system.file(package = "LabRS")
 
 # per aprire la cartella
 shell.exec("C:/.../Documents/R/win-library/3.5/LabRS/")
+
+
+
+# FINE SESSIONE -----------------------------------------------------------
+
+# (consigliabile) salvare il file dei comandi e dei risultati
+# chiudendo RCommander

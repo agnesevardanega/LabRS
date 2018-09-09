@@ -193,5 +193,6 @@ class(MYSLID$Eta.classi)
 
 # FINE SESSIONE -----------------------------------------------------------
 
-# salvare il file dei comandi e dei risultati chiudendo RCommander
+# (consigliabile) salvare il file dei comandi e dei risultati
+# chiudendo RCommander
 # salvare l'area di lavoro chiudendo R
