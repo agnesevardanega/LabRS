@@ -15,80 +15,6 @@ library(Rcmdr)
 # Da Menu di RCommander o da R: Impostare la directory di lavoro
 # setwd("C:/.../Laboratorio R")
 
-# Caricare l'area di lavoro precedentemente caricata
-load(".RData")
-
-
-# VARIABILI ---------------------------------------------------------------
-
-# vettori numerici
-var.num <- c(1, 0, 9, 2, 5, 3, 10)
-ls()
-str(var.num)
-var.num[4]
-var.num[var.num == 5]
-var.num[var.num > 3]
-
-# vettori carattere
-sette.nani <- c("Dotto", "Mammolo", "Pisolo", "Brontolo",
-                "Gongolo", "Eolo", "Cucciolo")
-str(sette.nani)
-sette.nani[6]
-sette.nani[sette.nani != "Eolo"]
-
-# fattori
-attr(var.num)
-attr(sette.nani)
-
-
-# DATAFRAME ---------------------------------------------------------------
-
-# liste
-lista <- list("baci" = var.num, "sette.nani" = sette.nani,
-              "somma" = 3+5, "pippo" = "pippo")
-str(lista)
-
-lista[3]
-lista[1]
-
-str(lista[3])
-
-lista[[1]]
-str(lista[[1]])
-
-lista$somma         # equivale a lista[[3]]
-lista[["somma"]]    # equivale a lista[[3]]
-lista["somma"]      # equivale a lista[3]
-
-lista$baci[3]
-lista[["baci"]][3]
-lista$sette.nani[3]
-lista$sette.nani[sette.nani == "Mammolo"]
-
-# dataframe
-df <- data.frame("sette.nani" = sette.nani, "baci" = var.num)
-str(df)
-
-df[1,]                    # prima riga (caso)
-df[,2]                    # seconda colonna (variabile)
-df[1,2]                   # prima riga e seconda colonna
-
-df[1]             # colonna del df (sottoinsieme)
-df[[1]]           # vettore, corrisponde a df[,1]
-df$sette.nani
-
-df$baci[3]
-
-# righe e colonne
-attributes(lista)
-attributes(df)
-names(df)
-row.names(df)
-colnames(df)     # come names
-rownames(df)     # come row.names
-
-rm(var.num, sette.nani, lista, df)
-
 
 # IMPORTAZIONE DEI DATI ---------------------------------------------------
 
@@ -144,7 +70,7 @@ names(MYSLID)
 # RCMDR: ricodificare una variabile categoriale
 MYSLID <- within(MYSLID, {
  Genere <- Recode(Genere, '"Female" = "Donna"; "Male" = "Uomo"',
- as.factor.result=TRUE)
+ as.factor=TRUE)
 })
 
 # cambiare a mano le righe di comando
@@ -153,7 +79,7 @@ MYSLID <- within(MYSLID, {
     Lingua,
     '"English" = "Inglese";
     "French" = "Francese"; "Other" = "Altro"',
-    as.factor.result = TRUE
+    as.factor = TRUE
   )
 })
 
@@ -190,9 +116,79 @@ MYSLID$Eta.classi <- with(MYSLID, factor(Eta.classi,
 # controllare il risultato
 class(MYSLID$Eta.classi)
 
+# salvare il file di dati
+save(MYSLID, file = "data/MYSLID.rda")
+
+
+# STRUTTURE DI DATI -------------------------------------------------------
+
+# vettori numerici
+var.num <- c(1, 0, 9, 2, 5, 3, 10)
+ls()
+str(var.num)
+var.num[4]
+var.num[var.num > 3]
+var.num[var.num == 5]
+
+# vettori carattere
+sette.nani <- c("Dotto", "Mammolo", "Pisolo", "Brontolo",
+                "Gongolo", "Eolo", "Cucciolo")
+str(sette.nani)
+sette.nani[6]
+sette.nani[sette.nani != "Eolo"]
+
+# vettori logici
+sette.nani == "Eolo"
+
+# liste
+lista <- list("baci" = var.num, "sette.nani" = sette.nani,
+              "somma" = 3+5, "pippo" = "pippo")
+str(lista)
+
+lista[3]
+lista[1]
+
+str(lista[3])       # controlliamo la struttura
+
+lista[[1]]
+str(lista[[1]])
+
+lista$somma         # equivale a lista[[3]]
+lista[["somma"]]    # equivale a lista[[3]]
+lista["somma"]      # equivale a lista[3]
+
+lista$baci[3]
+lista[["baci"]][3]
+lista$sette.nani[3]
+lista$sette.nani[sette.nani == "Mammolo"]
+
+# dataframe
+df <- data.frame("sette.nani" = sette.nani, "baci" = var.num)
+df
+str(df)
+
+df[1,]                    # prima riga (caso)
+df[,2]                    # seconda colonna (variabile)
+df[1,2]                   # prima riga e seconda colonna
+
+df[1]             # colonna del df (sottoinsieme)
+df[[1]]           # vettore, corrisponde a df[,1]
+df$sette.nani
+
+df$baci[3]
+
+# righe e colonne
+attributes(lista)
+attributes(df)
+names(df)
+row.names(df)
+colnames(df)     # come names
+rownames(df)     # come row.names
+
+rm(var.num, sette.nani, lista, df)
+
 
 # FINE SESSIONE -----------------------------------------------------------
 
 # (consigliabile) salvare il file dei comandi e dei risultati
 # chiudendo RCommander
-# salvare l'area di lavoro chiudendo R
