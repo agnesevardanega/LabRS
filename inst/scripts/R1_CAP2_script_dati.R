@@ -1,7 +1,7 @@
-# SCRIPT TRASFORMAZIONE DEI DATI
+# SCRIPT RICODIFICA DEI DATI
 
 # pacchetti
-library(Rcmdr)
+library(Rcmdr)   #2.4-4
 
 # importazione dei dati
 MYSLID <-

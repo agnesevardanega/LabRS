@@ -3,7 +3,7 @@ Type: Package
 Title: Laboratorio di Ricerca Sociale con R
 Version: 0.1.0
 Author: Agnese Vardanega [aut, cre]
-Mantainer: Agnese Vardanega <avardanega@unite.it>
+Maintainer: Agnese Vardanega <avardanega@unite.it>
 URL: http://www.agnesevardanega.eu/metref/
 Depends: knitr
 Suggests: Rcmdr

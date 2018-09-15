@@ -46,17 +46,6 @@ help("ChickWeight")
 rm(ChickWeight, Animals)
 
 
-# INFORMAZIONI SUGLI OGGETTI ----------------------------------------------
-
-# informazioni sul dataset
-names(MYSLID)
-str(MYSLID)
-
-# informazioni sulle variabili
-str(MYSLID$wages)
-str(MYSLID$language)
-
-
 # RICODIFICA e trasformazioni delle variabili -----------------------------
 
 # RCMDR: rinominare le variabili
@@ -116,6 +105,7 @@ MYSLID$Eta.classi <- with(MYSLID, factor(Eta.classi,
 # controllare il risultato
 class(MYSLID$Eta.classi)
 
+
 # salvare il file di dati
 save(MYSLID, file = "data/MYSLID.rda")
 
@@ -154,8 +144,8 @@ lista[[1]]
 str(lista[[1]])
 
 lista$somma         # equivale a lista[[3]]
-lista[["somma"]]    # equivale a lista[[3]]
 lista["somma"]      # equivale a lista[3]
+lista[["somma"]]    # equivale a lista[[3]]
 
 lista$baci[3]
 lista[["baci"]][3]
@@ -167,15 +157,15 @@ df <- data.frame("sette.nani" = sette.nani, "baci" = var.num)
 df
 str(df)
 
-df[1,]                    # prima riga (caso)
-df[,2]                    # seconda colonna (variabile)
-df[1,2]                   # prima riga e seconda colonna
+df[1,]                  # prima riga (caso)
+df[,2]                  # seconda colonna (variabile)
+df[1,2]                 # prima riga e seconda colonna (elemento)
 
 df[1]             # colonna del df (sottoinsieme)
 df[[1]]           # vettore, corrisponde a df[,1]
 df$sette.nani
 
-df$baci[3]
+df$baci[3]        # corrisponde a df[3,2]
 
 # righe e colonne
 attributes(lista)
