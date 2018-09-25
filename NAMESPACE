@@ -2,8 +2,13 @@
 
 export(devianza)
 export(esm)
+export(expchart)
+export(expdata)
+export(exptab)
 export(frequenze)
+export(med)
 export(nmiss)
 export(nval)
 export(percent)
+export(tabcont)
 export(tabfreq)
