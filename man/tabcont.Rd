@@ -4,7 +4,7 @@
 \alias{tabcont}
 \title{Tabelle di contingenza}
 \usage{
-tabcont(x, y, digits = 1, totali = TRUE)
+tabcont(x, y, digits = 1, margin = 2, totali = TRUE)
 }
 \arguments{
 \item{x}{fattore: variabile di riga}
@@ -12,6 +12,8 @@ tabcont(x, y, digits = 1, totali = TRUE)
 \item{y}{fattore: variabile di colonna}
 
 \item{digits}{numero dei decimali (vedi \code{\link[base]{round}})}
+
+\item{margin}{margin marginale (vedi \code{\link[base]{prop.table}})}
 
 \item{totali}{logico: TRUE = con totali di colonna in VA}
 }
