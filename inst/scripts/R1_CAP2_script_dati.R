@@ -1,3 +1,6 @@
+# Ricerca Sociale con R
+# Agnese Vardanega - avardanega@unite.it
+
 # SCRIPT RICODIFICA DEI DATI
 
 # pacchetti

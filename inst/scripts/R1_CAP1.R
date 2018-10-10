@@ -14,9 +14,6 @@ help(chisq.test)
 ?chisq.test
 ??chisq
 
-# demo
-demo(lm.glm)
-
 
 # RCOMMANDER --------------------------------------------------------------
 
@@ -71,7 +68,3 @@ shell.exec("C:/.../Documents/R/win-library/3.5/LabRS/")
 
 
 
-# FINE SESSIONE -----------------------------------------------------------
-
-# (consigliabile) salvare il file dei comandi e dei risultati
-# chiudendo RCommander

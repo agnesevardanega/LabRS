@@ -178,7 +178,3 @@ rownames(df)     # come row.names
 rm(var.num, sette.nani, lista, df)
 
 
-# FINE SESSIONE -----------------------------------------------------------
-
-# (consigliabile) salvare il file dei comandi e dei risultati
-# chiudendo RCommander
