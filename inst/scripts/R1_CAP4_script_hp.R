@@ -19,6 +19,7 @@ numSummary(MYSLID[,"Retribuzione", drop=FALSE],
 # Rcmdr boxplot bivariato
 Boxplot(Retribuzione~Genere, data=MYSLID, id=list(method="y"))
 
+
 # TEST DELLE MEDIE
 t.test(Retribuzione~Genere, alternative='two.sided',
        conf.level=.95, var.equal=FALSE, data=MYSLID)
@@ -44,12 +45,12 @@ t.test(Istruzione~Genere, alternative='two.sided',
 # controllo per <65 anni
 t.test(Retribuzione~Genere, alternative='two.sided',
        conf.level=.95, var.equal=FALSE,
-       data=MYSLID[MYSLID$Eta<65,])
+       data=MYSLID[MYSLID$Eta<66,])
 
 t.test(Eta~Genere, alternative='two.sided',
        conf.level=.95, var.equal=FALSE,
-       data=MYSLID[MYSLID$Eta<65,])
+       data=MYSLID[MYSLID$Eta<66,])
 
 t.test(Istruzione~Genere, alternative='two.sided',
        conf.level=.95, var.equal=FALSE,
-       data=MYSLID[MYSLID$Eta<65,])
+       data=MYSLID[MYSLID$Eta<66,])

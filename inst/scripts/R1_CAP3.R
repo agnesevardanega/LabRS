@@ -7,7 +7,7 @@
 # e non sono eseguibili se non è caricato Rcmdr
 
 
-# INIZIO SESSIONE ----------------------------------------------------------
+# INIZIO SESSIONE ---------------------------------------------------------
 
 # avviare RCommander
 library(Rcmdr)
@@ -22,7 +22,7 @@ library(LabRS)
 # load(".RData")
 
 
-# DISTRIBUZIONI DI FREQUENZA -----------------------------------------------
+# DISTRIBUZIONI DI FREQUENZA ----------------------------------------------
 
 # dati
 data("MYSLID")
@@ -88,8 +88,11 @@ cumsum(percent(rev(tab2), 2))
 tabfreq(MYSLID$Lingua)
 tabfreq(MYSLID$Genere, digits = 1, totali = FALSE)
 
+# funzione frequenze
+frequenze(MYSLID, write = FALSE)
+frequenze(MYSLID, file = "res/frequenze.csv")
 
-# GRAFICI ------------------------------------------------------------------
+# GRAFICI -----------------------------------------------------------------
 
 # RCMDR grafici a barre
 with(MYSLID, Barplot(Eta.classi, xlab="Eta.classi", ylab="Frequency",
@@ -104,6 +107,7 @@ with(MYSLID, pie(table(Lingua), labels=levels(Lingua), xlab="", ylab="",
 with(MYSLID, Hist(Retribuzione, scale="frequency", breaks="Sturges",
                   col="darkgray", main="Retribuzione"))
 
+
 # PERSONALIZZARE I COLORI
 
 # palette di colori in RCommander
@@ -117,14 +121,14 @@ with(MYSLID, pie(table(Lingua), labels=levels(Lingua),
                  col=c(3,6,8)))                        # colore
 
 
-# VALORI CARATTERISTICI ----------------------------------------------------
+# VALORI CARATTERISTICI ---------------------------------------------------
 
 # RCMDR statistiche riassuntive
 numSummary(MYSLID[,"Istruzione"], statistics=c("mean", "sd",
     "IQR", "quantiles"), quantiles=c(0,.25,.5,.75,1))
 
 
-# TENDENZA CENTRALE --------------------------------------------------------
+# TENDENZA CENTRALE -------------------------------------------------------
 
 # moda
 table(MYSLID$Lingua)
@@ -155,10 +159,10 @@ sum(MYSLID$Istruzione, na.rm = T) / nval(MYSLID$Istruzione)
 
 # scarti dalla media
 scarti <- MYSLID$Eta - mean(MYSLID$Eta)
-round(sum(scarti))ù
+round(sum(scarti))
 
 
-# VARIAZIONE ---------------------------------------------------------------
+# VARIAZIONE --------------------------------------------------------------
 
 # campo di variazione
 range(MYSLID$Retribuzione, na.rm = T)
@@ -204,14 +208,20 @@ SX / abs(media)
 rm(media, SX)  # elimino gli oggetti
 
 
-# SUMMARY ------------------------------------------------------------------
+# FREQUENZE IN CLASSI PER VARIABILI CONTINUE ------------------------------
+
+# RCMDR (da statistiche riassuntive)
+binnedCounts(MYSLID[,"Eta", drop=FALSE])
+
+
+# SUMMARY -----------------------------------------------------------------
 
 summary(MYSLID$Genere)
 summary(MYSLID$Retribuzione)
 summary(MYSLID)
 
 
-# DISTRIBUZIONE NORMALE ----------------------------------------------------
+# DISTRIBUZIONE NORMALE ---------------------------------------------------
 
 # frequenza relativa di un singolo valore
 
@@ -256,7 +266,7 @@ esm(MYSLID$Eta, q = 2.58, digits = 3)
 esm(MYSLID$Eta, qnorm(0.01/2), digits = 3)
 
 
-# DISTRIBUZIONE T ----------------------------------------------------------
+# DISTRIBUZIONE T ---------------------------------------------------------
 
 qt(0.05 / 2, df = 7424)
 qt(0.05 / 2, df = 749)
@@ -264,7 +274,7 @@ qt(0.05 / 2, df = 74)
 qt(0.05 / 2, df = 24)
 
 
-# FORMA DELLA DISTRIBUZIONE ------------------------------------------------
+# FORMA DELLA DISTRIBUZIONE -----------------------------------------------
 
 # Istogramma di densità'
 # Rcmdr
@@ -317,7 +327,7 @@ with(MYSLID, qqPlot(Eta, dist="norm",
                             labels=rownames(MYSLID))))
 
 
-# ASIMMETRIA ---------------------------------------------------------------
+# ASIMMETRIA --------------------------------------------------------------
 
 # coefficiente di asimmetria
 mm <- mean(MYSLID$Retribuzione, na.rm = T) -
@@ -328,13 +338,17 @@ mm <- mean(MYSLID$Retribuzione, na.rm = T) -
 rm(mm)
 
 # skewness
+mean(scarti^3)/sqrt((mean(scarti^2))^3)
+# oppure
 mean(scarti^3)/(mean(scarti^2))^(3/2)
+
 skewness(MYSLID$Eta, type = 1)
 skewness(MYSLID$Eta, type = 2) # RCommander, SAS, SPSS
 skewness(MYSLID$Eta, type = 3) # default
 
 # kurtosis
 (mean(scarti^4)/(mean(scarti^2))^(2)) - 3
+
 kurtosis(MYSLID$Eta, type = 1)
 kurtosis(MYSLID$Eta, type = 2) # RCommander, SAS, SPSS
 kurtosis(MYSLID$Eta, type = 3) # default
