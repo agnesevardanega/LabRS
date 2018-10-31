@@ -19,7 +19,6 @@ numSummary(MYSLID[,"Retribuzione", drop=FALSE],
 # Rcmdr boxplot bivariato
 Boxplot(Retribuzione~Genere, data=MYSLID, id=list(method="y"))
 
-
 # TEST DELLE MEDIE
 t.test(Retribuzione~Genere, alternative='two.sided',
        conf.level=.95, var.equal=FALSE, data=MYSLID)

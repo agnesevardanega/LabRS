@@ -110,13 +110,13 @@ t.test(Eta~Genere, alternative='two.sided',
 t.test(Istruzione~Genere, alternative='two.sided',
        conf.level=.95, var.equal=FALSE, data=MYSLID)
 
-# ESERCIZIO: controllo per <65 anni
+# ESERCIZIO: controllo per <66 anni
 t.test(Retribuzione~Genere, alternative='two.sided',
-       conf.level=.95, var.equal=FALSE, data=MYSLID[MYSLID$Eta<65,])
+       conf.level=.95, var.equal=FALSE, data=MYSLID[MYSLID$Eta<66,])
 t.test(Eta~Genere, alternative='two.sided',
-       conf.level=.95, var.equal=FALSE, data=MYSLID[MYSLID$Eta<65,])
+       conf.level=.95, var.equal=FALSE, data=MYSLID[MYSLID$Eta<66,])
 t.test(Istruzione~Genere, alternative='two.sided',
-       conf.level=.95, var.equal=FALSE, data=MYSLID[MYSLID$Eta<65,])
+       conf.level=.95, var.equal=FALSE, data=MYSLID[MYSLID$Eta<66,])
 
 
 # ANOVA -------------------------------------------------------------------
@@ -226,8 +226,8 @@ DT.Y <- devianza(cars$dist)            # devianza totale
 DR <- sum(LM.res$residuals^2)          # dev. non spiegata
 DM <- DT.Y - DR                        # dev. spiegata
 R2 <- DM / DT.Y                        # R^2
-R2
-R2 / (1 - R2) * 48 / 1                 # F
+
+R2 / (1 - R2) * 48                 # F
 1 - pf(89.57, 1, 48)
 rm(DT.Y, DR, DM, R2)
 
@@ -240,7 +240,6 @@ cov(cars$speed, cars$dist) / var(cars$dist)
 3.932409 * 0.1655676
 # e coefficiente di correlazione
 sqrt(3.932409 * 0.1655676)
-
 
 
 # ANALISI DELLE CORRISPONDENZE --------------------------------------------
@@ -283,5 +282,4 @@ remove(faccende.CA)
 
 CA.res$eig
 dimdesc(CA.res, axes=1:2)
-
 
