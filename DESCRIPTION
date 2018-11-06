@@ -8,6 +8,6 @@ URL: http://www.agnesevardanega.eu/metref/
 Depends: knitr
 Suggests: Rcmdr
 Description: Libreria di "Ricerca sociale con R". Concetti e funzioni base per la ricerca sociale.
-License: GPL (>= 3)
+License: file LICENSE
 Encoding: UTF-8
 RoxygenNote: 6.1.0
