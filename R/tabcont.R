@@ -13,6 +13,7 @@
 #' @examples data("MYSLID")
 #' tabcont(MYSLID$Lingua, MYSLID$Genere)
 #' tabcont(MYSLID$Lingua, MYSLID$Genere, totali = FALSE)
+#' @import stats
 #' @export
 tabcont <- function (x, y, digits = 1, margin = 2, totali = TRUE) {
   if (!is.factor(x) | !is.factor(y)) {

@@ -30,7 +30,7 @@ a
 # elenco degli oggetti
 ls()
 
-# rimuovere uno o più oggetti
+# rimuovere uno o pi? oggetti
 rm(a)
 
 # salvare e caricare area di lavoro
@@ -44,7 +44,7 @@ load(file.choose())
 
 # DIRECTORY DI LAVORO -----------------------------------------------------
 
-# per sapere quale è:
+# per sapere quale ?:
 getwd()
 
 # per cambiarla:
@@ -59,9 +59,9 @@ install.packages("devtools", dependencies = TRUE)
 devtools::install_github("agnesevardanega/LabRS")
 
 # per trovare i file del pacchetto:
-system.file("extdata", package = "LabRS")
-system.file("scripts", package = "LabRS")
 system.file(package = "LabRS")
+system.file("extdata", package = "LabRS")  # per il file Excel
+system.file("script", package = "LabRS")   # per gli scripts
 
 # per aprire la cartella
 shell.exec("C:/.../Documents/R/win-library/3.5/LabRS/")

@@ -24,6 +24,7 @@
 #'         dids = c("Genere", "Lingua parlata per Genere"),
 #'         aggiungi = TRUE)
 #' @return file in formato csv con le tabelle
+#' @import utils
 #' @export
 exptab <- function(tab, file, dids = names(tab),
                    aggiungi = FALSE, ...)

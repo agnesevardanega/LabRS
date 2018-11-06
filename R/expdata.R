@@ -14,6 +14,7 @@
 #' @return file in formato csv
 #' @examples data("MYSLID")
 #' expdata(MYSLID, file = "MYSLID.csv")
+#' @import utils
 #' @export
 expdata <- function(x, file, ...) {
   write.table(x, file,

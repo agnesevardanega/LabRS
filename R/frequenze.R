@@ -12,6 +12,7 @@
 #' @return file in formato csv con le tabelle,  o lista con le tabelle
 #' @examples data("MYSLID")
 #' frequenze(MYSLID, "frequenze.csv")
+#' @import utils
 #' @export
 frequenze <- function (x, write = TRUE, file, aggiungi = FALSE, ...) {
   res <- lapply(x, tabfreq)

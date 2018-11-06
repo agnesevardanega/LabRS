@@ -12,6 +12,7 @@
 #' @param ... altri argomenti ereditati \code{\link[grDevices]{dev.copy}}
 #' @examples expchart(png, file = "chart.png", ppi = 300, hprop = 4, wprop = 4)
 #' @return file immagine
+#' @import grDevices
 #' @export
 expchart <- function(device = png, file, ppi = 72, hprop = 6.7, wprop = 6.7, ...)
 {

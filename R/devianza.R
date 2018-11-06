@@ -7,6 +7,8 @@
 #' @param ... altri argomenti ereditati da \code{\link[stats]{cor}}
 #' @return Valore della devianza
 #' @export
+#' @import stats
+
 devianza <- function (x, ...)
 {
   var(x, na.rm = TRUE, ...) * (nval(x) - 1)

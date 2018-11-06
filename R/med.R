@@ -9,6 +9,7 @@
 #' @return mediana (valore o livello)
 #' @examples med(Orange$Tree) # fattore ordinato
 #' med(cars$speed) # vettore numerico
+#' @import stats
 #' @export
 med <- function (x, na.rm = TRUE, ...)
 {

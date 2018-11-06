@@ -9,6 +9,7 @@
 #' @return quantili (valori o livelli)
 #' @examples iqr(Orange$Tree) # fattore ordinato
 #' iqr(cars$speed) # vettore numerico
+#' @import stats
 #' @export
 iqr <- function (x, na.rm = TRUE, ...)
 {

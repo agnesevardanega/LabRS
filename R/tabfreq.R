@@ -9,6 +9,7 @@
 #' @return una matrice con due colonne
 #' @examples data("MYSLID")
 #' tabfreq(MYSLID$Lingua)
+#' @import stats
 #' @export
 tabfreq <- function (x, digits = 2, totali = TRUE) {
   if (!is.factor(x)) {

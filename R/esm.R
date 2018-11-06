@@ -11,6 +11,7 @@
 #' @return Valore della media, della deviazione standard, dell'errore standard,
 #' estremi dell'intervallo di confidenza, valore p dell'area.
 #' @examples esm(cars$speed)
+#' @import stats
 #' @export
 esm <- function (x, q = 1.96, digits = 6)
 {
