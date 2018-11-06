@@ -1,0 +1,17 @@
+citHeader("TO cite LabRS in publications use:")
+
+citEntry(
+  entry        = "Book",
+  title        = "Laboratorio di ricerca sociale con R - {LabRS}",
+  author       = personList(as.person("Agnese Vardanega")),
+  publisher    = "Agnese Vardanega",
+  address      = "Roma",
+  year         = "2018",
+  pages        = "#",
+  isbn         = "#",
+  url          = "http://www.ricercasocialeconr.it",
+  textVersion  =
+  paste("Agnese Vardanega (2018).",
+        "Laboratorio di ricerca sociale con R.",
+        "Roma")
+)
