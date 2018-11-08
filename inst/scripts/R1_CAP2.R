@@ -4,7 +4,7 @@
 # CAPITOLO 2
 # ==========
 # le righe precedute dal commento "RCMDR: ..." sono prodotte da menu di Rcmdr
-# e non sono eseguibili se non è caricato Rcmdr
+# e non sono eseguibili se non ? caricato Rcmdr
 
 
 # INIZIO SESSIONE ---------------------------------------------------------
@@ -116,7 +116,7 @@ save(MYSLID, file = "data/MYSLID.rda")
 var.num <- c(1, 0, 9, 2, 5, 3, 10)
 ls()
 str(var.num)
-var.num[4]
+var.num[4]          # quarto elemento del vettore
 var.num[var.num > 3]
 var.num[var.num == 5]
 

@@ -4,7 +4,7 @@
 # CAPITOLO 5
 
 # le righe precedute dal commento "RCMDR: ..." sono prodotte da menu di Rcmdr
-# e non sono eseguibili se non è caricato Rcmdr
+# e non sono eseguibili se non ? caricato Rcmdr
 
 
 # INIZIO SESSIONE ---------------------------------------------------------
@@ -41,10 +41,6 @@ plot(cars$speed, cars$dist,
      asp = 1)                                 # 1:1
 abline(lm(data = cars, dist ~ speed))
 
-plot(scale(cars$speed), scale(cars$dist),
-     asp = 1)                                 # 1:1 valori z
-abline(lm(data = cars, scale(dist) ~ scale(speed)))
-
 
 # limiti e bordo
 
@@ -78,11 +74,11 @@ plot(cars,
 grid()
 abline(lm(data = cars, dist ~ speed))
 
-title(xlab = "Velocità",
+title(xlab = "Velocit?",
       ylab = "Spazio di frenata")
 
 plot(data = cars, dist ~ speed,
-     xlab = "Velocità",
+     xlab = "Velocit?",
      ylab = "Spazio di frenata")
 
 
@@ -103,7 +99,7 @@ plot(MYSLID$Genere, MYSLID$Lingua)
 # GRAFICI A BARRE ---------------------------------------------------------
 
 barplot(table(MYSLID$Eta.classi),            # Fig. 1
-        main = "Classi di età")              # titolo
+        main = "Classi di et?")              # titolo
 
 attributes(table(MYSLID$Eta.classi))
 
@@ -166,15 +162,15 @@ hist(MYSLID$Retribuzione,                    # Fig. 3
 
 hist(MYSLID$Eta,                             # Fig. 6
      freq = FALSE,
-     main = "Età",
+     main = "Et?",
      xlab = NULL,
-     ylab = "Densità")
+     ylab = "Densit?")
 
 hist(MYSLID$Retribuzione,                    # Fig. 7
      prob = TRUE,
      main = "Retribuzione",
      xlab = NULL,
-     ylab = "Densità")
+     ylab = "Densit?")
 
 # etichette
 hist(MYSLID$Eta,
@@ -280,12 +276,12 @@ hist(scale(MYSLID$Eta),                       # Fig. 6
 curve(dnorm(x),
       add = TRUE,
       lty = 3,                                # linea a punti
-      lwd = 2)                                # linea più spessa
+      lwd = 2)                                # linea pi? spessa
 
 
 # ALTRI GRAFICI -----------------------------------------------------------
 
-# grafico di densità
+# grafico di densit?
 plot(density(MYSLID$Eta))                     # Fig. 8
 
 
@@ -484,7 +480,7 @@ curve(dchisq(x, df = 15),
       lwd = 2,
       lty = 3)
 legend("topright",
-       title = "Gradi di libertà",
+       title = "Gradi di libert?",
        legend = c("3","9","15"),              # testo
        lty = c(1, 2, 3),                      # linee
        lwd = 2,                               # spessore linee
@@ -522,11 +518,11 @@ plot(MYSLID$Istruzione, MYSLID$Retribuzione,
 
 legend(-1, 62,
        legend = levels(MYSLID$Eta.classi),    # testo della legenda
-       fill = cm.colors(6),                    # bordo dei punti
+       fill = cm.colors(6),                   # bordo dei punti
        horiz = TRUE,
        cex = 0.8,                             # dimensione carattere
        bty = "n",                             # senza box
-       title = "Classi di età")
+       title = "Classi di et?")
 par(xpd = FALSE)
 
 
