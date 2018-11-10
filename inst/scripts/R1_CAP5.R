@@ -4,7 +4,7 @@
 # CAPITOLO 5
 
 # le righe precedute dal commento "RCMDR: ..." sono prodotte da menu di Rcmdr
-# e non sono eseguibili se non è caricato Rcmdr
+# e non sono eseguibili se non e' caricato Rcmdr
 
 
 # INIZIO SESSIONE ---------------------------------------------------------
@@ -74,11 +74,11 @@ plot(cars,
 grid()
 abline(lm(data = cars, dist ~ speed))
 
-title(xlab = "Velocità",
+title(xlab = "Velocita",
       ylab = "Spazio di frenata")
 
 plot(data = cars, dist ~ speed,
-     xlab = "Velocità",
+     xlab = "Velocita",
      ylab = "Spazio di frenata")
 
 
@@ -99,7 +99,7 @@ plot(MYSLID$Genere, MYSLID$Lingua)
 # GRAFICI A BARRE ---------------------------------------------------------
 
 barplot(table(MYSLID$Eta.classi),            # Fig. 1
-        main = "Classi di età")              # titolo
+        main = "Classi di eta")              # titolo
 
 attributes(table(MYSLID$Eta.classi))
 
@@ -162,15 +162,15 @@ hist(MYSLID$Retribuzione,                    # Fig. 3
 
 hist(MYSLID$Eta,                             # Fig. 6
      freq = FALSE,
-     main = "Età",
+     main = "Eta",
      xlab = NULL,
-     ylab = "Densità")
+     ylab = "Densita")
 
 hist(MYSLID$Retribuzione,                    # Fig. 7
      prob = TRUE,
      main = "Retribuzione",
      xlab = NULL,
-     ylab = "Densità")
+     ylab = "Densita")
 
 # etichette
 hist(MYSLID$Eta,
@@ -276,12 +276,12 @@ hist(scale(MYSLID$Eta),                       # Fig. 6
 curve(dnorm(x),
       add = TRUE,
       lty = 3,                                # linea a punti
-      lwd = 2)                                # linea più spessa
+      lwd = 2)                                # linea piu' spessa
 
 
 # ALTRI GRAFICI -----------------------------------------------------------
 
-# grafico di densità
+# grafico di densita'
 plot(density(MYSLID$Eta))                     # Fig. 8
 
 
@@ -480,7 +480,7 @@ curve(dchisq(x, df = 15),
       lwd = 2,
       lty = 3)
 legend("topright",
-       title = "Gradi di libertà",
+       title = "Gradi di liberta",
        legend = c("3","9","15"),              # testo
        lty = c(1, 2, 3),                      # linee
        lwd = 2,                               # spessore linee
@@ -522,7 +522,7 @@ legend(-1, 62,
        horiz = TRUE,
        cex = 0.8,                             # dimensione carattere
        bty = "n",                             # senza box
-       title = "Classi di età")
+       title = "Classi di eta")
 par(xpd = FALSE)
 
 

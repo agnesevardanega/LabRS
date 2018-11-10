@@ -33,7 +33,7 @@ t.test(Retribuzione~Genere, alternative='less',
 tab3 <- table(MYSLID$Lingua, MYSLID$Genere)
 chisq.test(tab3)
 
-# controllo Età
+# controllo Eta'
 t.test(Eta~Genere, alternative='two.sided',
        conf.level=.95, var.equal=FALSE, data=MYSLID)
 

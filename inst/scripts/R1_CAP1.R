@@ -30,7 +30,7 @@ a
 # elenco degli oggetti
 ls()
 
-# rimuovere uno o più oggetti
+# rimuovere uno o piu' oggetti
 rm(a)
 
 # salvare e caricare area di lavoro
@@ -44,7 +44,7 @@ load(file.choose())
 
 # DIRECTORY DI LAVORO -----------------------------------------------------
 
-# per sapere quale è:
+# per sapere quale e':
 getwd()
 
 # per cambiarla:

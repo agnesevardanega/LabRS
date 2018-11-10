@@ -4,7 +4,7 @@
 # CAPITOLO 4
 
 # le righe precedute dal commento "RCMDR: ..." sono prodotte da menu di Rcmdr
-# e non sono eseguibili se non è caricato Rcmdr
+# e non sono eseguibili se non e' caricato Rcmdr
 
 
 # INIZIO SESSIONE ---------------------------------------------------------
@@ -82,7 +82,7 @@ pchisq(30.07015, df = 2)       # area tratteggiata
 chisq.test(tab3/3)
 0.24422/3
 
-# gradi di libertà
+# gradi di liberta
 1- pchisq(8, df = 3)
 1 - pchisq(8, df = 9)
 1 - pchisq(8, df = 15)
@@ -143,7 +143,7 @@ oneway.test(Retribuzione ~ Eta.classi, data=MYSLID.2) # Welch test
 40777 / 4
 180232 / 3521
 5
-# gradi di libertà
+# gradi di liberta
 6309 - 2783 - 5
 
 # devianza

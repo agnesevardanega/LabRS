@@ -4,7 +4,7 @@
 # CAPITOLO 3
 
 # le righe precedute dal commento "RCMDR: ..." sono prodotte da menu di Rcmdr
-# e non sono eseguibili se non è caricato Rcmdr
+# e non sono eseguibili se non e' caricato Rcmdr
 
 
 # INIZIO SESSIONE ---------------------------------------------------------
@@ -96,7 +96,7 @@ frequenze(MYSLID, file = "res/frequenze.csv")
 
 # RCMDR grafici a barre
 with(MYSLID, Barplot(Eta.classi, xlab="Eta.classi", ylab="Frequency",
-                     main="Classi di Età"))
+                     main="Classi di Eta"))
 
 # RCMDR grafico a torta
 library(colorspace, pos=16)
@@ -239,7 +239,7 @@ sd(MYSLID$Eta, na.rm = T) / sqrt(nval(MYSLID$Eta))
 
 ## intervalli di confidenza
 
-# quantili e probabilità
+# quantili e probabilita'
 0.05 / 2        # area di errore / 2 (code)
 qnorm(0.025)    # quantile
 
@@ -276,11 +276,11 @@ qt(0.05 / 2, df = 24)
 
 # FORMA DELLA DISTRIBUZIONE -----------------------------------------------
 
-# Istogramma di densità'
+# Istogramma di densita'
 # Rcmdr
 with(MYSLID, Hist(Eta, scale="density", breaks="Sturges",
                   col="darkgray",
-                  xlab="", ylab="Densità", main="Età"))
+                  xlab="", ylab="Densita", main="Eta"))
 
 # curva normale
 curve(dnorm(x, mean = mean(MYSLID$Eta),
@@ -290,17 +290,17 @@ curve(dnorm(x, mean = mean(MYSLID$Eta),
 # Rcmdr
 with(MYSLID, Hist(Retribuzione, scale="density", breaks="Sturges",
                   col="darkgray",
-                  xlab="", ylab="Densità", main="Retribuzione"))
+                  xlab="", ylab="Densita", main="Retribuzione"))
 # curva normale
 curve(dnorm(x, mean = mean(MYSLID$Retribuzione, na.rm = TRUE),
             sd = sd(MYSLID$Retribuzione, na.rm = TRUE)),
       add = T)
 
-# grafico di densità
+# grafico di densita'
 # Rcmdr
 densityPlot( ~ Eta, method="kernel", data=MYSLID,
-             bw="SJ", adjust=1, kernel="gaussian", xlab="Età",
-             ylab="Densità")
+             bw="SJ", adjust=1, kernel="gaussian", xlab="Eta",
+             ylab="Densita")
 # curva normale
 curve(dnorm(x, mean = mean(MYSLID$Eta),
             sd = sd(MYSLID$Eta)),

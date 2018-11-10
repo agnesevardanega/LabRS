@@ -34,7 +34,7 @@ local({
 })
 
 
-# Classi di Età
+# Classi di Eta'
 with(MYSLID, Barplot(Eta.classi, xlab="Eta.classi", 
                      ylab="Frequency"))
 
@@ -47,7 +47,7 @@ local({
 })
 
 
-# Età, Istruzione, Retribuzione: istogrammi
+# Eta', Istruzione, Retribuzione: istogrammi
 with(MYSLID, Hist(Eta, scale="frequency", breaks="Sturges", 
                   col="darkgray"))
 with(MYSLID, Hist(Istruzione, scale="frequency", breaks="Sturges", 
@@ -56,7 +56,7 @@ with(MYSLID, Hist(Retribuzione, scale="frequency", breaks="Sturges",
                   col="darkgray"))
 
 
-# Età, Istruzione, Retribuzione: statistiche riassuntive
+# Eta', Istruzione, Retribuzione: statistiche riassuntive
 library(abind, pos=19)
 library(e1071, pos=20)
 numSummary(MYSLID[,c("Eta", "Istruzione", "Retribuzione"), drop=FALSE], 
