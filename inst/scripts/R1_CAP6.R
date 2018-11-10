@@ -4,7 +4,7 @@
 # CAPITOLO 6
 
 # le righe precedute dal commento "RCMDR: ..." sono prodotte da menu di Rcmdr
-# e non sono eseguibili se non ? caricato Rcmdr
+# e non sono eseguibili se non è caricato Rcmdr
 
 
 # INIZIO SESSIONE ---------------------------------------------------------
