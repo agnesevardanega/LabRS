@@ -19,7 +19,7 @@ frequenze <- function (x, write = TRUE, file, aggiungi = FALSE, ...) {
   res <- res[!is.na(res)]
 
   if (write == TRUE) {
-    for (i in 1:length(res)){
+    for (i in seq_along(res)){
       write(names(res)[i],
             file = file,
             append = ifelse(i == 1, aggiungi, TRUE))

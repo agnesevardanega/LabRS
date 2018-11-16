@@ -4,14 +4,14 @@ citEntry(
   entry        = "Book",
   title        = "Laboratorio di ricerca sociale con R - {LabRS}",
   author       = personList(as.person("Agnese Vardanega")),
-  publisher    = "Agnese Vardanega",
-  address      = "Roma",
+  publisher    = "Self-Publishing",
+  address      = "Teramo",
   year         = "2018",
-  pages        = "#",
-  isbn         = "#",
+  pages        = "239",
+  isbn         = "9788829548477",
   url          = "http://www.ricercasocialeconr.it",
   textVersion  =
   paste("Agnese Vardanega (2018).",
-        "Laboratorio di ricerca sociale con R.",
-        "Roma")
+        "Laboratorio di ricerca sociale con R.", "Teramo",
+        "Self-Publishing")
 )

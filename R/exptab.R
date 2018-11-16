@@ -18,8 +18,8 @@
 #' tab1 = tabfreq(MYSLID$Genere)
 #' tab2 = tabcont(MYSLID$Lingua, MYSLID$Genere)
 #' # una tabella
-#' exptab(tab1, file = "tabelle.csv")
-#' # tabelle diverse
+#' exptab(list(tab1), file = "tabelle.csv")
+#' # tabelle diverse con didascalie
 #' exptab(list(tab1, tab2), file = "tabelle.csv",
 #'         dids = c("Genere", "Lingua parlata per Genere"),
 #'         aggiungi = TRUE)
@@ -29,7 +29,7 @@
 exptab <- function(tab, file, dids = names(tab),
                    aggiungi = FALSE, ...)
 {
-  for (i in 1:length(tab)){
+  for (i in seq_along(tab)){
     write(dids[[i]],
           file,
           append = ifelse(i == 1, aggiungi, TRUE))
