@@ -121,8 +121,9 @@ barplot(tabM,                               # Fig. 15
         ylab = "Frequency",
         legend = row.names(tabM))          # legenda
 
-barplot(tab2,
-        horiz = T)                          # orizzontali
+barplot(tab2, 
+        horiz = T,                         # orizzontali
+        las = 1)                           # etichette orizzontali
 
 # etichette
 barplot(tab1,
