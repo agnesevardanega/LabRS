@@ -253,8 +253,7 @@ faccende
 # percentuali di riga
 rbind(
   percent(faccende, margin = 1, digits = 1),
-  TOTALE = percent(margin.table(faccende, 2), 1))
-
+  TOTALE = percent(colSums(faccende), 1))
 
 # CA
 # Rcmdr
