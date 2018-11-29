@@ -2,12 +2,12 @@ Package: LabRS
 Type: Package
 Title: Laboratorio di Ricerca Sociale con R
 Version: 0.1.0
-Author: Agnese Vardanega [aut, cre]
+Author: Agnese Vardanega
 Maintainer: Agnese Vardanega <avardanega@unite.it>
-URL: http://www.agnesevardanega.eu/metref/
+URL: http://www.agnesevardanega.eu/
 Depends: knitr
 Suggests: Rcmdr
-Description: Libreria di "Ricerca sociale con R". Concetti e funzioni base per la ricerca sociale.
+Description: Libreria di dati, scripts e funzioni che accompagna il libro "Ricerca sociale con R. Concetti e funzioni base per la ricerca sociale".
 License: file LICENSE
 Encoding: UTF-8
 RoxygenNote: 6.1.1
