@@ -2,4 +2,4 @@
 
 0 errors | 0 warnings | 0 note
 
-* fixed DESCRIPTION and CITATION files
+* fixed DESCRIPTION and deleted LICENSE files

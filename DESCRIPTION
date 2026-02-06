@@ -6,7 +6,7 @@ URL: http://www.agnesevardanega.eu/
 Depends: knitr
 Suggests: Rcmdr
 Description: Libreria di dati, scripts e funzioni che accompagna il libro "Ricerca sociale con R. Concetti e funzioni base per la ricerca sociale".
-License: file LICENSE
+License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.3.3
 Authors@R: person(given = "Agnese", family = "Vardanega", 
