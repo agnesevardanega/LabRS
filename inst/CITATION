@@ -1,17 +1,9 @@
-citHeader("TO cite LabRS in publications use:")
-
-citEntry(
-  entry        = "Book",
-  title        = "Laboratorio di ricerca sociale con R - {LabRS}",
-  author       = personList(as.person("Agnese Vardanega")),
-  publisher    = "StreetLib SP",
-  address      = "s.l.",
-  year         = "2018",
-  pages        = "239",
-  isbn         = "9788829548477",
-  url          = "http://www.ricercasocialeconr.it",
-  textVersion  =
-  paste("Agnese Vardanega (2018). ",
-        "Laboratorio di ricerca sociale con R. ", "s.l. ",
-        "StreetLib SP.")
+bibentry(
+  bibtype = "Book",
+  title = {Ricerca sociale con R. Concetti e funzioni di base per l'analisi esplorativa dei dati},
+  author = {Vardanega, Agnese},
+  year = {2018},
+  isbn = {978-88-295-4847-7},
+  pagetotal = {236}
 )
+

@@ -11,3 +11,7 @@ Description: Libreria di dati, scripts e funzioni che accompagna il libro "Ricer
 License: file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.3.3
+Authors@R: person(given = "Agnese", family = "Vardanega", 
+           email = "avardanega@unite.it", 
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-1419-9896"))
