@@ -2,8 +2,6 @@ Package: LabRS
 Type: Package
 Title: Laboratorio di Ricerca Sociale con R
 Version: 0.2.0
-Author: Agnese Vardanega
-Maintainer: Agnese Vardanega <avardanega@unite.it>
 URL: http://www.agnesevardanega.eu/
 Depends: knitr
 Suggests: Rcmdr

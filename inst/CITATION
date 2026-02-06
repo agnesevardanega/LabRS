@@ -1,9 +1,10 @@
 bibentry(
   bibtype = "Book",
-  title = {Ricerca sociale con R. Concetti e funzioni di base per l'analisi esplorativa dei dati},
-  author = {Vardanega, Agnese},
-  year = {2018},
-  isbn = {978-88-295-4847-7},
-  pagetotal = {236}
+  title = "Ricerca sociale con R. Concetti e funzioni di base per l'analisi esplorativa dei dati",
+  author = "Vardanega, Agnese",
+  year = 2018,
+  publisher = "StreetLib",
+  isbn = 978-88-295-4847-7,
+  pagetotal = 236
 )
 
