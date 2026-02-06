@@ -10,30 +10,34 @@
 #' @param aggiungi (se write = TRUE) logico; aggiunge le tabelle ad un file esistente (come append)
 #' @param ... argomenti ereditati da \code{\link[LabRS]{tabfreq}}
 #' @return file in formato csv con le tabelle,  o lista con le tabelle
-#' @examples data("MYSLID")
+#' @examples
+#' \dontrun{
+#' data("MYSLID")
 #' frequenze(MYSLID, "frequenze.csv")
+#' }
 #' @import utils
 #' @export
-frequenze <- function (x, write = TRUE, file, aggiungi = FALSE, ...) {
+frequenze <- function(x, write = TRUE, file, aggiungi = FALSE, ...) {
   res <- lapply(x, tabfreq)
   res <- res[!is.na(res)]
 
   if (write == TRUE) {
-    for (i in seq_along(res)){
-      write(names(res)[i],
-            file = file,
-            append = ifelse(i == 1, aggiungi, TRUE))
+    for (i in seq_along(res)) {
+      write(names(res)[i], file = file, append = ifelse(i == 1, aggiungi, TRUE))
 
-      write.table(res[[i]],
-                  file = file,
-                  dec = ",",
-                  sep = ";",
-                  na = "",
-                  col.names = NA,
-                  append = T)
+      write.table(
+        res[[i]],
+        file = file,
+        dec = ",",
+        sep = ";",
+        na = "",
+        col.names = NA,
+        append = T
+      )
 
       write("", file = file, append = TRUE)
     }
-  } else
+  } else {
     res
+  }
 }

@@ -4,8 +4,7 @@
 \alias{expchart}
 \title{Esporta i grafici}
 \usage{
-expchart(device = png, file, ppi = 72, hprop = 6.7, wprop = 6.7,
-  ...)
+expchart(device = png, file, ppi = 72, hprop = 6.7, wprop = 6.7, ...)
 }
 \arguments{
 \item{device}{default = png; formato immagine (png, jpeg, tiff, bmp; non pdf e svg) vedi \code{\link[grDevices]{dev.copy}}}
@@ -30,5 +29,7 @@ I valori di default sono impostati in modo da esportare una immagine png con
 la risoluzione e le dimensioni prodotte da R di default.
 }
 \examples{
+\dontrun{
 expchart(png, file = "chart.png", ppi = 300, hprop = 4, wprop = 4)
+}
 }

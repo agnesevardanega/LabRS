@@ -17,7 +17,7 @@ med(x, na.rm = TRUE, ...)
 mediana (valore o livello)
 }
 \description{
-Calcola la mediana anche per i fattori ordinati. Tratta dalla funzione \code{\link[labstatR]{Me}} 
+Calcola la mediana anche per i fattori ordinati. Tratta dalla funzione \code{Me}
 del pacchetto labstatR.
 Per default, considera solo i casi validi.
 }

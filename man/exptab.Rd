@@ -32,6 +32,7 @@ row.names = TRUE,
 col.names = NA (per le colonne nel file csv).
 }
 \examples{
+\dontrun{
 data("MYSLID")
 tab1 = tabfreq(MYSLID$Genere)
 tab2 = tabcont(MYSLID$Lingua, MYSLID$Genere)
@@ -41,4 +42,5 @@ exptab(list(tab1), file = "tabelle.csv")
 exptab(list(tab1, tab2), file = "tabelle.csv",
         dids = c("Genere", "Lingua parlata per Genere"),
         aggiungi = TRUE)
+}
 }

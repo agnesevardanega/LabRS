@@ -27,6 +27,8 @@ row.names = FALSE
 identificativi di caso).
 }
 \examples{
+\dontrun{
 data("MYSLID")
 expdata(MYSLID, file = "MYSLID.csv")
+}
 }

@@ -12,16 +12,13 @@
 #' @param file nome del file di esportazione (con estensione csv)
 #' @param ... argomenti ereditati da \code{\link[utils]{write.table}}
 #' @return file in formato csv
-#' @examples data("MYSLID")
+#' @examples
+#' \dontrun{
+#' data("MYSLID")
 #' expdata(MYSLID, file = "MYSLID.csv")
+#' }
 #' @import utils
 #' @export
 expdata <- function(x, file, ...) {
-  write.table(x, file,
-              dec = ",",
-              sep = ";",
-              na = "",
-              row.names = FALSE,
-              ...
-  )
+  write.table(x, file, dec = ",", sep = ";", na = "", row.names = FALSE, ...)
 }

@@ -26,6 +26,8 @@ Produce le tabelle delle frequenze per tutte le variabili categoriali
 e le esporta in formato csv con \code{\link[LabRS]{exptab}}.
 }
 \examples{
+\dontrun{
 data("MYSLID")
 frequenze(MYSLID, "frequenze.csv")
+}
 }

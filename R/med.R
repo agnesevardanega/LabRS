@@ -1,6 +1,6 @@
 #' Mediana (fattori ordinati)
 #'
-#' Calcola la mediana anche per i fattori ordinati. Tratta dalla funzione \code{\link[labstatR]{Me}} 
+#' Calcola la mediana anche per i fattori ordinati. Tratta dalla funzione \code{Me}
 #' del pacchetto labstatR.
 #' Per default, considera solo i casi validi.
 #'
@@ -14,8 +14,7 @@
 #' @references Stefano M.Iacus and Guido Masarotto (2018). labstatR: Libreria
 #' Del Laboratorio Di Statistica Con R. R package version 1.0.9.
 #' @export
-med <- function (x, na.rm = TRUE, ...)
-{
+med <- function(x, na.rm = TRUE, ...) {
   if (is.factor(x)) {
     if (!is.ordered(x)) {
       warning("La mediana non si puo' calcolare!!!")
@@ -25,11 +24,10 @@ med <- function (x, na.rm = TRUE, ...)
     if (me - floor(me) != 0) {
       warning("Mediana indeterminata")
       return(NA)
-    }
-    else {
+    } else {
       levels(x)[me]
     }
-  }
-  else
+  } else {
     median(x, na.rm, ...)
+  }
 }

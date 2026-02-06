@@ -14,7 +14,9 @@
 #' per default, è costituito dal nome degli elementi della lista
 #' @param aggiungi aggiunge le tabelle ad un file esistente (come append), logico
 #' @param ... altri argomenti ereditati \code{\link[utils]{write.table}}
-#' @examples data("MYSLID")
+#' @examples
+#' \dontrun{
+#' data("MYSLID")
 #' tab1 = tabfreq(MYSLID$Genere)
 #' tab2 = tabcont(MYSLID$Lingua, MYSLID$Genere)
 #' # una tabella
@@ -23,30 +25,24 @@
 #' exptab(list(tab1, tab2), file = "tabelle.csv",
 #'         dids = c("Genere", "Lingua parlata per Genere"),
 #'         aggiungi = TRUE)
+#' }
 #' @return file in formato csv con le tabelle
 #' @import utils
 #' @export
-exptab <- function(tab, file, dids = names(tab),
-                   aggiungi = FALSE, ...)
-{
-  for (i in seq_along(tab)){
-    write(dids[[i]],
-          file,
-          append = ifelse(i == 1, aggiungi, TRUE))
-    write.table(tab[[i]],
-               file,
-               dec = ",",
-               sep = ";",
-               na = "",
-               row.names = ifelse(length(dimnames(tab[[i]]))==1,
-                                  FALSE, TRUE),
-               col.names = ifelse(length(dimnames(tab[[i]]))==1,
-                                  TRUE, NA),
-               append = TRUE,
-               ...)
-    write(" ",
-          file,
-          append = TRUE)
+exptab <- function(tab, file, dids = names(tab), aggiungi = FALSE, ...) {
+  for (i in seq_along(tab)) {
+    write(dids[[i]], file, append = ifelse(i == 1, aggiungi, TRUE))
+    write.table(
+      tab[[i]],
+      file,
+      dec = ",",
+      sep = ";",
+      na = "",
+      row.names = ifelse(length(dimnames(tab[[i]])) == 1, FALSE, TRUE),
+      col.names = ifelse(length(dimnames(tab[[i]])) == 1, TRUE, NA),
+      append = TRUE,
+      ...
+    )
+    write(" ", file, append = TRUE)
   }
 }
-
