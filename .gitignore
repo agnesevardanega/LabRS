@@ -2,5 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-LabRS_n.Rproj
-^.*\.Rproj
+labRS.Rproj
+cran-comments.md
+*.Rproj
