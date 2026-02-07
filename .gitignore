@@ -5,3 +5,6 @@
 labRS.Rproj
 cran-comments.md
 *.Rproj
+
+/.quarto/
+**/*.quarto_ipynb
