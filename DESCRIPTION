@@ -1,7 +1,8 @@
 Package: LabRS
 Type: Package
 Title: Laboratorio di Ricerca Sociale con R
-Version: 0.2.0
+Language: it
+Version: 0.2.1
 URL: http://www.agnesevardanega.eu/
 Depends: knitr
 Suggests: Rcmdr
