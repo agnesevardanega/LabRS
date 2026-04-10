@@ -6,5 +6,4 @@ labRS.Rproj
 cran-comments.md
 *.Rproj
 CRAN-SUBMISSION
-
 **/*.quarto_ipynb
