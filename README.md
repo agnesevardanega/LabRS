@@ -1,6 +1,7 @@
 # LabRS
 
 ![CRAN status](https://www.r-pkg.org/badges/version/LabRS) 
+[![CRAN Downloads](https://cranlogs.r-pkg.org/badges/grand-total/LabRS)](https://cran.r-project.org/package=LabRS)
 [![DOI](https://img.shields.io/badge/DOI-10.32614/CRAN.package.LabRS-blue.svg)](https://doi.org/10.32614/CRAN.package.LabRS) 
 [![License:
 GPL-3](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://opensource.org/license/gpl-3-0) 
